@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>BIỂU MẪU</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <script src="assets/app.js" defer></script>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Danh mục biểu mẫu</title>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/app.js" defer></script>
 </head>
 <body>
 
-<header>
-  <h1>📚 DANH MỤC MẪU</h1>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-eyebrow">Thư viện nội bộ</span>
+    <h1>Danh mục biểu mẫu</h1>
+  </div>
   <div class="actions">
-    <input id="search" placeholder="🔍 Tìm biểu mẫu"/>
-    <button id="expandAll">Mở rộng</button>
-    <button id="collapseAll">Thu gọn</button>
+    <div class="search-wrap">
+      <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M13.3 13.3L17.5 17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      <input id="search" placeholder="Tìm biểu mẫu theo tên hoặc ghi chú…" autocomplete="off"/>
+    </div>
+    <button id="expandAll" class="btn-ghost">Mở rộng</button>
+    <button id="collapseAll" class="btn-ghost">Thu gọn</button>
   </div>
 </header>
 
 <main class="layout">
 
-  <!-- LEFT: TREE -->
+  <!-- LEFT: MỤC LỤC -->
   <section class="left">
-    <div class="tree-container card">
+    <div class="panel index-panel">
+      <div class="panel-label">Mục lục</div>
       <ul id="tree" class="tree"></ul>
     </div>
   </section>
 
-  <!-- RIGHT: DETAIL -->
+  <!-- RIGHT: CHI TIẾT -->
   <section class="right" id="detail">
-    <div class="detail-box card placeholder">
-      <p>
-        👉 <span style="color:#2563eb; font-weight:600;">
-          Mời bạn chọn một thư mục và nhấn vào biểu mẫu để sử dụng
-        </span>
-      </p>
+    <div class="detail-box panel placeholder">
+      <div class="placeholder-mark">☞</div>
+      <p>Chọn một mục trong danh mục bên trái để xem chi tiết biểu mẫu.</p>
     </div>
   </section>
 
 </main>
+
+<footer class="foot-note">Cổng biểu mẫu nội bộ — cập nhật thủ công theo từng đợt phát hành.</footer>
 
 </body>
 </html>
